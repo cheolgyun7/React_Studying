@@ -119,57 +119,101 @@
 
         // }
 
+        // class Component extends React.Component {
+
+        //     // state = { //state를 초기값생성하는과정
+        //     //     count: 0,
+        //     // }
+
+        //     constructor(props){
+        //         super(props);
+
+        //         //
+        //         this.state = {count:0};
+        //     }
+
+        //     render() {
+        //         return (
+        //             <div>
+        //                 <h1>
+        //                     {this.props.message} 이것은  함수로 만든 컴포넌트입니다.
+        //                 </h1>
+        //             <p>{this.state.count}</p>
+        //             </div>
+        //         );
+        //     }
+
+        //     componentDidMount(){
+        //         setTimeout(() =>{
+        //             // this.state.count = this.state.count + 1;
+
+        //             // this.setState({
+        //             //     count: this.state.count + 1,
+        //             // })
+
+        //             this.setState((previousState) => {
+        //                 const newState = { count: previousState.count + 1 }
+        //                 return newState;
+        //             });
+        //         },1000);
+        //     }
+
+
+        //     static defaultProps = {
+        //         message: "기본값이요",
+        //     }
+        // } 
+
+
+
+        // ReactDOM.render(
+        //     <Component  message="기본값1234" />,
+        //     document.querySelector("#root")
+        // );
+
+
+        // 2022-1223 09:25
+        //Event Handling
+
+        // function Component(){
+        //     return <div><button onClick={()=>{
+        //         console.log("클릭했음")
+        //     }}
+        //     >
+        //     클릭
+        //     </button></div>
+        // }
+
         class Component extends React.Component {
-
-            // state = { //state를 초기값생성하는과정
-            //     count: 0,
-            // }
-
-            constructor(props){
-                super(props);
-
-                //
-                this.state = {count:0};
+            state = {
+                count: 0,
             }
+            // constructor(props){
+            //     super(props);
 
+            //     this.click = this.click.bind(this);
+            // }
             render() {
                 return (
                     <div>
-                        <h1>
-                            {this.props.message} 이것은  함수로 만든 컴포넌트입니다.
-                        </h1>
-                    <p>{this.state.count}</p>
+                        <p>{this.state.count}</p>
+                        <button onClick={this.click}
+                        >
+                            클릭
+                        </button>
                     </div>
                 );
             }
-
-            componentDidMount(){
-                setTimeout(() =>{
-                    // this.state.count = this.state.count + 1;
-
-                    // this.setState({
-                    //     count: this.state.count + 1,
-                    // })
-
-                    this.setState((previousState) => {
-                        const newState = { count: previousState.count + 1 }
-                        return newState;
-                    });
-                },1000);
-            }
-
-
-            static defaultProps = {
-                message: "기본값이요",
+            click = () => {
+                console.log("클릭했음");
+                                this.setState((state) => ({
+                                    ...state,
+                                    count: state.count + 1,
+                                }));
             }
         }
 
-    
-
-        ReactDOM.render(
-            <Component  message="기본값1234" />,
-            document.querySelector("#root")
-        );
+        ReactDOM.render(<Component />, document.querySelector("#root"))
     </script>
 </body>
 
