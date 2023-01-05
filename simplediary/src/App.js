@@ -21,6 +21,7 @@ function App() {
         created_date : new Date().getTime(),
         id : dataId.current++
       }
+      
     })
 
     setData(initData);
