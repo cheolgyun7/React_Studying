@@ -7,6 +7,7 @@ const DiaryEditor = ({onCreate}) =>{
         content: "",
         emotion: "1",
     })
+    // dd
 
     const authorInput = useRef();
     const contentInput = useRef();
