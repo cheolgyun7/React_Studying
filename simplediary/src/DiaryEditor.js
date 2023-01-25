@@ -19,6 +19,7 @@ const DiaryEditor = ({onCreate}) =>{
             [e.target.name]: e.target.value,
         })
     }
+    
     const handleSubmit = () =>{ //저장하기 버튼을 눌렀을때 발생하는함수
         if(state.author.length < 1){  //한글자 이상 입력하라는 조건문
             //focus
