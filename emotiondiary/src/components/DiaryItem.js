@@ -24,6 +24,7 @@ const DiaryItem = ({id, emotion, content, date}) => {
             </div>
 
             <div 
+            
             onClick={goDetail}
             className="info_wrapper">
                 <div className="diary_date">{strDate}</div>
