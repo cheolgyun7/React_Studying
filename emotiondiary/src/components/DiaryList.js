@@ -38,7 +38,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
 const DiaryList = ({ diaryList }) => {
     const navigate = useNavigate();
     //정렬기준의 state를만듦(sortType)
-    const [sortType, setSortType] = useState("lastest"); //초기값을 최신순인lastest로 설정
+    const [sortType, setSortType] = useState("latest"); //초기값을 최신순인lastest로 설정
     const [filter, setFilter] = useState("all"); //초기값을 all으로 모든감정을 적용
 
     //최신순, 오래된순을 클릭햇을때 리스트내용이 바뀌어야 하기 때문에 함수적용
@@ -52,7 +52,7 @@ const DiaryList = ({ diaryList }) => {
             }
         }
         const compare = (a, b) => {
-            if (sortType === 'lastest') {
+            if (sortType === 'latest') {
                 return parseInt(b.date) - parseInt(a.date);
             } else {
                 return parseInt(a.date) - parseInt(b.date);
@@ -90,7 +90,7 @@ const DiaryList = ({ diaryList }) => {
                 </div>
             </div>
             {getProcessedDiaryList().map((it) => (
-                <DiaryItem key={it.id} {...it}/>
+                <DiaryItem key={it.id} {...it} />
                 //{it.emotion}을 넣으면감정점수생김
             ))}
         </div>
