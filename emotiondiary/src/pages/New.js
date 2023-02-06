@@ -1,10 +1,9 @@
-const New =() => {
+import DiaryEditor from "../components/DiaryEditor";
+
+const New = () => {
     return (
-        <div>
-            <h3>New</h3>
-            <p>이곳은 New 입니다</p>
-        </div>
-    );
+        <DiaryEditor />
+    )
 };
 
 export default New;
