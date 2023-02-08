@@ -1,4 +1,5 @@
 //감정에 대한 데이터 배열이 필요함
+//dfdf
 export const emotionList = [
     {
         emotion_id: 1,
