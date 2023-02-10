@@ -1,3 +1,3 @@
 export default function Header() {
-    return <div>header 입니다</div>
+    return <div>Header 입니다</div>
 }
