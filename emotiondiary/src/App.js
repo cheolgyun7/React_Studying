@@ -86,6 +86,7 @@ function App() {
   const dataId = useRef(6);
   //CREATE
   const onCreate = (date, content, emotion) => {
+    console.log("123123213");
     dispatch({
       type: "CREATE", data: {
         id: dataId.current,

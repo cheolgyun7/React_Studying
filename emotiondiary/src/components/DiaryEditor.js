@@ -6,6 +6,7 @@ import { getStringDate } from "../util/date";
 import MyButton from "./MyButton";
 import MyHeader from "./MyHeader";
 
+
 //감정에 대한 데이터 배열이 필요함
 const emotionList = [
     {
@@ -61,7 +62,6 @@ const DiaryEditor = ({ isEdit, originData }) => {
                 onEdit(originData.id, date, content, emotion);
             }
         }
-        onCreate(date, content, emotion);
         navigate("/", { replace: true })
     };
 
